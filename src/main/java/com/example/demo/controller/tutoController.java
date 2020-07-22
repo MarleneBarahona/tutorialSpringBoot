@@ -18,11 +18,18 @@ public class tutoController {
 	@GetMapping("/greeting")
 	public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 		Persona p = new Persona();
-		p.setNombre("aiuda");
-		p.setIdPersona(1);
+		p.setNombre("salaberga");
+		p.setIdPersona(2);
 		repo.save(p);
 		
 		model.addAttribute("name", name);
+		return "greeting";
+	}
+	
+	@GetMapping("/listar")
+	public String listar(Model model) {
+		
+		model.addAttribute("personas", repo.findAll());
 		return "greeting";
 	}
 }
