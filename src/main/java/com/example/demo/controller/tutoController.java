@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.model.Persona;
@@ -32,4 +33,22 @@ public class tutoController {
 		model.addAttribute("personas", repo.findAll());
 		return "greeting";
 	}
+	
+    @RequestMapping("/")
+    public String getIndex(Model model){
+        model.addAttribute("page","index");
+        return "index";
+    }
+    
+    @RequestMapping("/skatteberegning")
+    public String getSkatteberegning(Model model){
+        model.addAttribute("page","skatteberegning");
+        return "index";
+    }
+
+    @RequestMapping("/minside")
+    public String getMinside(Model model){
+        model.addAttribute("page","minside");
+        return "index";
+    }
 }
