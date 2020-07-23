@@ -51,4 +51,10 @@ public class tutoController {
         model.addAttribute("page","minside");
         return "index";
     }
+    
+    @GetMapping("/bootstrapxd")
+    public String getHeader(Model model){
+        //model.addAttribute("header","header");
+        return "bootstrapxd";
+    }
 }
