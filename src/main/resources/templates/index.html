@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8"/>
+    <title>My homepage</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+
+<style type="text/css">
+	.active{
+		color:red;
+	}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-faded">
+	<a class="navbar-brand" href="/" th:classappend="${#httpServletRequest.getRequestURI() == '/' ? 'active':''}">Hjem</a>
+	<ul class="nav navbar-nav">
+		<li class="nav navbar-nav">
+			<a th:classappend="${#httpServletRequest.getRequestURI() == '/skatteberegning' ? 'active':''}" class="nav-link" href="/skatteberegning">Skatteberegning</a>
+		</li>
+		<li class="nav navbar-nav">
+			<a th:classappend="${#httpServletRequest.getRequestURI() == '/minside' ? 'active':''}"  class="nav-link" href="/minside">Min side</a>
+		</li>
+	</ul>
+
+</nav>
+
+<div class="container-fluid">
+<span th:text="${page}"></span>
+	<div th:replace="home :: content">
+	</div>
+	
+
+</div>
+s
+</body>
+</html>

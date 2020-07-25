@@ -54,6 +54,8 @@ public class tutoController {
     
     @GetMapping("/bootstrapxd")
     public String getHeader(Model model){
+
+		model.addAttribute("personas", repo.findAll());
         //model.addAttribute("header","header");
         return "bootstrapxd";
     }
