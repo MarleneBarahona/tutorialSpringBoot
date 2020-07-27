@@ -5,6 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+
+	<div th:insert="home :: content">
     <p th:text="'Hello, ' + ${name} + '!'" />
     
     <table>
@@ -15,5 +17,6 @@
     		</tr>
     	</th.block>
     </table>
+    
 </body>
 </html>

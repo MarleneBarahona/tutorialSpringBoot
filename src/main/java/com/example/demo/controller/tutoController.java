@@ -52,11 +52,11 @@ public class tutoController {
         return "index";
     }
     
-    @GetMapping("/bootstrapxd")
+    @GetMapping("/home")
     public String getHeader(Model model){
 
 		model.addAttribute("personas", repo.findAll());
         //model.addAttribute("header","header");
-        return "bootstrapxd";
+        return "home";
     }
 }
