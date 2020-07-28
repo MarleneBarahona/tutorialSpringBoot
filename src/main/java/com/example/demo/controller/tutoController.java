@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.model.Persona;
@@ -52,11 +54,23 @@ public class tutoController {
         return "index";
     }
     
-    @GetMapping("/home")
+    //OFICIAL
+    @GetMapping("/")
     public String getHeader(Model model){
 
 		model.addAttribute("personas", repo.findAll());
         //model.addAttribute("header","header");
-        return "home";
+        return "QuienesSomos";
     }
+	@RequestMapping(value="/formularioAliados",method=RequestMethod.GET)
+	public String formularioAliados(Model model) {
+		Persona foo = new Persona();
+		foo.setNombre("bar");
+		//model.addAttribute("personas", repo.findAll());
+		return "formularioAliados";
+	}
+	@RequestMapping(value="/processFormularioAliados",method=RequestMethod.POST)
+	public String processformularioAliados(@ModelAttribute(value="foo") Persona foo ){
+		return "QuienesSomos";
+	}
 }

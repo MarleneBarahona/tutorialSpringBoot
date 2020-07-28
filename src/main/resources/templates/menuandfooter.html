@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
 	<div th:fragment="header">
 		<header>
 		    <div class="container-sm border">
-		      	<img th:src="@{/LogoICEVI.png}" alt="aqui esta el header" width="804" height="236"> 
+		      	<img th:src="@{/LogoICEVI.png}" alt="aquí esta el header" width="804" height="236"> 
 		    </div>
 		</header>
 	</div>
@@ -27,34 +27,73 @@
 				<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				    <ul class="navbar-nav">
 				      <li class="nav-item dropdown">
-					      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Quienes somos</a>
+					      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Quiénes somos</a>
 				              <div class="dropdown-menu">
-				        		<a class="dropdown-item" href="#">Antecedentes</a>
-						        <a class="dropdown-item" href="#Legalizacion">Legalizacion</a>
+				        		<a class="dropdown-item" href="greeting">Antecedentes</a>
+						        <a class="dropdown-item" href="#Legalizacion">Legalización</a>
 						        <a class="dropdown-item" href="#">Estructura y autoridades</a>
 						        <a class="dropdown-item" href="#">Objetivos estrategicos</a>
 						       </div>
 				      </li>
 				      <li class="nav-item dropdown">
-				        <a class="nav-link dropdown-toggle" href="#">Nuestro trabajo</a>
+				        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Nuestro trabajo</a>
+				        <div class="dropdown-menu">
+				        		<a class="dropdown-item" href="#">Nuestras regiones</a>
+						        <a class="dropdown-item" href="#">Monitoreo sobre estado de la educación inclusica en América Latina</a>
+						 </div>
 				      </li>
 				      <li class="nav-item dropdown">
-				        <a class="nav-link dropdown-toggle" href="#">Delegados</a>
+				        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Delegados</a>			
+				         <div class="dropdown-menu">
+				        		<a class="dropdown-item" href="#">Subregionales</a>
+						        <a class="dropdown-item" href="#">Nacionales</a>
+						 </div>
 				      </li>    
 				     <li class="nav-item dropdown">
-				        <a class="nav-link dropdown-toggle" href="#">Aliados</a>
+				        <a class="nav-link dropdown-toggle"data-toggle="dropdown" href="#">Aliados</a>
+				         <div class="dropdown-menu">
+				        		<a class="dropdown-item" href="#">ICEVI Global</a>
+						        <a class="dropdown-item" href="#">FOAI</a>
+						        <a class="dropdown-item" href="#">Fundación holandesa</a>
+						        <a class="dropdown-item" href="#">ULAC</a>
+						        <a class="dropdown-item" href="#">READIS</a>
+						        <a class="dropdown-item" href="#">Perkins</a>
+						 </div>
 				      </li>
 				      <li class="nav-item dropdown">
-				        <a class="nav-link dropdown-toggle" href="#">Publicaciones</a>
+				        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Publicaciones</a>
+				        <div class="dropdown-menu">
+				        		<a class="dropdown-item" href="#">Posicionamiento técnico</a>
+						        <a class="dropdown-item" href="#">Los niños nos cuentan</a>
+						        <a class="dropdown-item" href="#">Boletines</a>
+						        <a class="dropdown-item" href="#">El Educador</a>
+						        <a class="dropdown-item" href="#">Estatutos</a>
+						        <a class="dropdown-item" href="#">Plan estratégico</a>
+						        <a class="dropdown-item" href="#">Otras publicaciones</a>
+						 </div> 
 				      </li>
 				      <li class="nav-item dropdown">
-				        <a class="nav-link dropdown-toggle" href="#">Eventos</a>
+				        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Eventos</a>
+				        <div class="dropdown-menu">
+				        		<a class="dropdown-item" href="#">Eventos 2021</a>
+						        <a class="dropdown-item" href="#">Webinars</a>
+						 </div> 
 				      </li>    
 				      <li class="nav-item dropdown">
-				        <a class="nav-link dropdown-toggle" href="#">Recursos</a>
+				        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Recursos</a>
+				        <div class="dropdown-menu">
+				        		<a class="dropdown-item" href="#">Biblioteca</a>
+						        <a class="dropdown-item" href="#">Software</a>
+						        <a class="dropdown-item" href="#">Videoteca</a>
+						        <a class="dropdown-item" href="#">Audioteca</a>
+						 </div> 
 				      </li>
 				      <li class="nav-item dropdown">
-				        <a class="nav-link dropdown-toggle" href="#">Afiliate</a>
+				        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Afiliate</a>
+				        <div class="dropdown-menu">
+				        		<a class="dropdown-item" href="#">¿Qué es ser aliado ICEVI?</a>
+						        <a class="dropdown-item" href="formularioAliados">Formulario de afiliación</a>
+						 </div> 
 				      </li>    
 				    </ul>
 				  </div>  
@@ -65,18 +104,18 @@
 	  <div class="container" aling="center">
 	  Contactanos<br>
 	  	<a href="https://www.linkedin.com/">
-		  	<button>Linkedin ICEVI
-			  	<i class="fa fa-linkedin-square" style="font-size:24px"></i>
+		  	<button>
+			  	<i class="fa fa-linkedin-square" style="font-size:24px"></i> Linkedin ICEVI
 			</button>
 		</a>
 		<a href="https://www.facebook.com/ICEVILatinoamerica/">
-		    <button>Facebook ICEVI
-		  		<i class="fa fa-facebook-square" style="font-size:24px"></i>
+		    <button>
+		  		<i class="fa fa-facebook-square" style="font-size:24px"></i> Facebook ICEVI
 			</button>
 		</a>
 		<a href="https://twitter.com/ICEVI_LA/">
-		    <button>Twitter ICEVI
-			  	<i class="fa fa-twitter-square" style="font-size:24px"></i>
+		    <button>
+			  	<i class="fa fa-twitter-square" style="font-size:24px"></i> Twitter ICEVI
 		  	</button>
 		</a>
 		</div>
